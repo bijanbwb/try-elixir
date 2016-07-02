@@ -6,7 +6,7 @@ defmodule Calc do
   @vsn 0.1
 
   @doc """
-  Prints hello to user.
+  Prints hello message to user.
   """
   @spec hello(charlist()) :: charlist()
   def hello(name \\ "World") do
@@ -73,7 +73,7 @@ defmodule Calc do
   end
 
   @doc """
-  Returns a number based on an atom from :one to :three.
+  Returns a number based on an atom from `:one` to `:three`.
   """
   @spec print_number(atom()) :: number()
   def print_number(number) do
@@ -81,6 +81,30 @@ defmodule Calc do
       :one -> 1
       :two -> 2
       :three -> 3
+    end
+  end
+
+  @doc """
+  Recursively counts down from a number argument to zero.
+
+  Returns atom() `:ok` if successful with `IO` side effect to print count.
+  """
+  @spec countdown(number()) :: atom()
+  def countdown(from) when from > 0 do
+    IO.inspect(from)
+    countdown(from - 1)
+  end
+
+  @doc """
+  After the countdown() function above has reached zero,
+  print `"Blast off!"` to standard output.
+
+  Returns atom() `:ok` if successful with `IO` side effect to print output.
+  """
+  @spec countdown(number()) :: atom()
+  def countdown(from) do
+    if from == 0 do
+      IO.puts("Blast off!")
     end
   end
 
