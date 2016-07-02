@@ -64,12 +64,24 @@ defmodule Calc do
   @doc """
   Prints a tuple of atoms and numbers.
   """
-  @spec numbers() :: charlist()
-  def numbers() do
+  @spec print_tuple() :: charlist()
+  def print_tuple() do
     tuple = {:one, 1}
     atom = elem(tuple, 0)
     num = elem(tuple, 1)
     "Elements: " <> to_string(atom) <> " " <> to_string(num)
+  end
+
+  @doc """
+  Returns a number based on an atom from :one to :three.
+  """
+  @spec print_number(atom()) :: number()
+  def print_number(number) do
+    case number do
+      :one -> 1
+      :two -> 2
+      :three -> 3
+    end
   end
 
 end
