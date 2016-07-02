@@ -108,4 +108,16 @@ defmodule Calc do
     end
   end
 
+  @doc """
+  Takes in a number and returns its factorial using recursion.
+  """
+  @spec factorial(number()) :: number()
+  def factorial(number) do
+    if number > 1 do
+      number * factorial(number - 1)
+    else
+      1
+    end
+  end
+
 end
