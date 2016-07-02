@@ -8,9 +8,7 @@ defmodule Calc do
   @doc """
   Prints hello to user.
   """
-
   @spec hello(charlist()) :: charlist()
-
   def hello(name \\ "World") do
     "Hello " <> name
   end
@@ -18,9 +16,7 @@ defmodule Calc do
   @doc """
   Adds two numbers together.
   """
-
   @spec add(number(), number()) :: number()
-
   def add(a, b) do
     a + b
   end
@@ -28,9 +24,7 @@ defmodule Calc do
   @doc """
   Subtracts one number from another.
   """
-
   @spec sub(number(), number()) :: number()
-
   def sub(a, b) do
     a - b
   end
@@ -38,9 +32,7 @@ defmodule Calc do
   @doc """
   Returns the absolute value for a negative number.
   """
-
   @spec absolute(number()) :: number()
-
   def absolute(number) when number < 0 do
     - number
   end
@@ -48,9 +40,7 @@ defmodule Calc do
   @doc """
   Returns the absolute value for a positive number.
   """
-
   @spec absolute(number()) :: number()
-
   def absolute(number) do
     number
   end
@@ -58,9 +48,7 @@ defmodule Calc do
   @doc """
   Increments a number by one.
   """
-
   @spec inc(number()) :: number()
-
   def inc(a) do
     a + 1
   end
@@ -68,9 +56,7 @@ defmodule Calc do
   @doc """
   Decrements a number by one.
   """
-
   @spec dec(number()) :: number()
-
   def dec(a) do
     a - 1
   end
