@@ -36,6 +36,26 @@ defmodule Calc do
   end
 
   @doc """
+  Returns the absolute value for a negative number.
+  """
+
+  @spec absolute(number()) :: number()
+
+  def absolute(number) when number < 0 do
+    - number
+  end
+
+  @doc """
+  Returns the absolute value for a positive number.
+  """
+
+  @spec absolute(number()) :: number()
+
+  def absolute(number) do
+    number
+  end
+
+  @doc """
   Increments a number by one.
   """
 
