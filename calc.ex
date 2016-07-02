@@ -9,9 +9,9 @@ defmodule Calc do
   Prints hello to user.
   """
 
-  @spec hello(name) :: string()
+  @spec hello(charlist()) :: charlist()
 
-  def hello(name) do
+  def hello(name \\ "World") do
     "Hello " <> name
   end
 
