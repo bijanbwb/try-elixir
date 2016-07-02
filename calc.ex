@@ -61,4 +61,15 @@ defmodule Calc do
     a - 1
   end
 
+  @doc """
+  Prints a tuple of atoms and numbers.
+  """
+  @spec numbers() :: charlist()
+  def numbers() do
+    tuple = {:one, 1}
+    atom = elem(tuple, 0)
+    num = elem(tuple, 1)
+    "Elements: " <> to_string(atom) <> " " <> to_string(num)
+  end
+
 end
