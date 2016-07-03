@@ -121,6 +121,36 @@ defmodule Calc do
   end
 
   @doc """
+  Create a list of 10 numbers with `List` functions.
+  """
+  @spec lists() :: list()
+  def lists() do
+    a = [1, 2, 3, 4]
+    b = [5, 6, 7, 8]
+    c = Enum.concat(a, b)
+    d = [c, [9, 10]]
+    e = List.flatten(d)
+    [head | tail] = e
+    head ++ tail
+  end
+
+  @doc """
+  Try out key-value pair functions.
+  """
+  @spec pairs() :: list()
+  def pairs() do
+    ages = [bijan: 32, aimee: 31]
+    if Keyword.has_key?(ages, :bijan) do
+      IO.puts("Bijan is #{Keyword.get(ages, :bijan)} years old.")
+    end
+
+    ages_updated = Keyword.put_new(ages, :riley, 1)
+    if Keyword.has_key?(ages_updated, :riley) do
+      IO.puts("Riley is #{Keyword.get(ages_updated, :riley)} year old.")
+    end
+  end
+
+  @doc """
   Uses process to send a message and return 10 times the argument.
   """
   @spec times_ten(number()) :: number()
