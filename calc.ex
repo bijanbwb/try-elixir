@@ -120,4 +120,16 @@ defmodule Calc do
     end
   end
 
+  @doc """
+  Uses process to send a message and return 10 times the argument.
+  """
+  @spec times_ten(number()) :: number()
+  def times_ten(number) do
+    pid = self()
+    send(pid, number)
+    receive do
+      x -> x * 10
+    end
+  end
+
 end
