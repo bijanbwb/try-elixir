@@ -8,7 +8,7 @@ defmodule Calc do
   @doc """
   Prints hello message to user.
   """
-  @spec hello(charlist()) :: charlist()
+  @spec hello(String) :: String
   def hello(name \\ "World") do
     "Hello " <> name
   end
@@ -64,7 +64,7 @@ defmodule Calc do
   @doc """
   Prints a tuple of atoms and numbers.
   """
-  @spec print_tuple() :: charlist()
+  @spec print_tuple() :: String
   def print_tuple() do
     tuple = {:one, 1}
     atom = elem(tuple, 0)
