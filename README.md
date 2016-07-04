@@ -6,4 +6,4 @@
 4. Try some functions:
   - `Calc.hello # => "Hello World"`
   - `Calc.add(5, 5) # => 10`
-  - `1 |> Calc.inc() |> Calc.inc # => 3`
+  - `1 |> Calc.inc |> Calc.inc # => 3`
