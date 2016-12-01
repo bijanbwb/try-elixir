@@ -1,5 +1,4 @@
 defmodule Bounce do
-
   @moduledoc """
   Bounce messages with report function.
   """
@@ -8,7 +7,8 @@ defmodule Bounce do
   @doc """
   Recursively uses `report()` function to receive and print messages.
 
-  Usage:
+  ## Usage
+
   ```elixir
   pid = spawn(Bounce, :report, [])
   send(pid, :hello)
@@ -17,13 +17,11 @@ defmodule Bounce do
   ```
   """
   @spec report() :: atom()
-
   def report do
     receive do
       msg -> IO.puts("Received #{msg}")
       report()
     end
-  end 
-
+  end
 end
 

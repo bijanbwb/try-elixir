@@ -1,5 +1,4 @@
 defmodule Calc do
-
   @moduledoc """
   Functions for performing calculations.
   """
@@ -161,5 +160,5 @@ defmodule Calc do
       x -> x * 10
     end
   end
-
 end
+

@@ -1,3 +1,10 @@
+# Experimenting with modules and functions while working through The Little
+# Schemer. The elegant and reasonable examples below are mostly taken from
+# another repo (https://github.com/jwhiteman/a-little-elixir-goes-a-long-way).
+# The ones with `cond` tend to be my obtuse examples while working through the
+# examples in the book and emulating some of the Scheme syntax. Wanted to keep
+# these examples around somewhere because they were really helpful in terms of
+# starting to think recursively.
 defmodule ListAtoms do
   def lat?([]), do: true
   def lat?([[_ | _] | _]), do: false

@@ -2,7 +2,7 @@ defmodule SimpleQueue do
   use GenServer
 
   @moduledoc """
-  Example from Elixir School:
+  GenServer Example from Elixir School:
   http://elixirschool.com/lessons/advanced/otp-concurrency/#genserver
   
   ## Usage
@@ -50,3 +50,4 @@ defmodule SimpleQueue do
   def enqueue(value), do: GenServer.cast(__MODULE__, {:enqueue, value})
   def dequeue, do: GenServer.call(__MODULE__, :dequeue)
 end
+

@@ -1,5 +1,4 @@
 defmodule Double do
-
   @moduledoc """
   Macro for doubling a number value.
   """
@@ -22,5 +21,5 @@ defmodule Double do
       2 * unquote(x)
     end
   end
-
 end
+
