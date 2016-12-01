@@ -14,8 +14,11 @@ brew install erlang elixir
 
 Many of the examples are easy to compile and run with `iex`:
 
-```
+```bash
 iex calc.ex
+```
+
+```elixir
 iex(1)> Calc.hello
 "Hello World"
 iex(2)> Calc.add(5, 5)
@@ -25,5 +28,5 @@ iex(3)> 1 |> Calc.inc |> Calc.inc
 ```
 
 For projects generated with Mix (the ones in folders), we can run the
-`mix` test command to verify that all is well.
+`mix test` command to verify that all is well.
 
