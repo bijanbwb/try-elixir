@@ -1,6 +1,7 @@
 # Issues
 
-**TODO: Add description**
+Sample command line utility from Programming Elixir book.
+Generate a command line application to list GitHub Issues for a public project.
 
 ## Installation
 
@@ -9,7 +10,7 @@ by adding `issues` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:issues, "~> 0.1.0"}]
+  [{:issues, "~> 0.0.1"}]
 end
 ```
 
