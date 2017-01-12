@@ -1,5 +1,6 @@
 defmodule Physics.Rocketry do
 
+  import Calcs
   import Converter
 
   @earth %{mass: 5.972e24, radius: 6.371e6}
@@ -19,7 +20,7 @@ defmodule Physics.Rocketry do
   end
 
   defp calculate_escape(%{mass: mass, radius: radius}) do
-    2 * @newtons_constant * mass / radius |> :math.sqrt
+    2 * @newtons_constant * mass / radius |> square_root
   end
 
 end
