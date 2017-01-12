@@ -21,7 +21,7 @@ defmodule Converter do
   end
 
   def to_nearest_tenth(val) when is_integer(val) or is_float(val) do
-    round_to(val, 1)
+    Float.ceil(val, 1)
   end
 
   def to_km(val) when is_integer(val) or is_float(val) do

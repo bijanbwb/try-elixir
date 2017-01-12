@@ -19,11 +19,7 @@ defmodule Physics.Rocketry do
     planet
     |> calculate_escape()
     |> Converter.to_km()
-    |> rounded_to_nearest_tenth()
-  end
-
-  defp rounded_to_nearest_tenth(val) do
-    Float.ceil(val, 1)
+    |> Converter.to_nearest_tenth()
   end
 
   defp calculate_escape(%{mass: mass, radius: radius}) do
