@@ -1,6 +1,20 @@
 defmodule Stack do
   @moduledoc """
   GenServer Stack example.
+
+  ## Examples
+
+  iex> {:ok, pid} = Stack.start_link([:one])
+  iex> Stack.push(pid, :two)
+  :ok
+  iex> Stack.push(pid, :three)
+  :ok
+  iex> Stack.pop(pid)
+  :three
+  iex> Stack.pop(pid)
+  :two
+  iex> Stack.pop(pid)
+  :one
   """
 
   use GenServer
