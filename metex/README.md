@@ -4,23 +4,13 @@ Example from The Little Elixir and OTP Guidebook.
 
 ## Usage
 
-```elixir
-iex> Metex.Worker.temperature_of("Orlando, FL")
-"Orlando, FL: 29.0°C"
+```bash
+iex -S mix
 ```
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `metex` to your list of dependencies in `mix.exs`:
-
 ```elixir
-def deps do
-  [{:metex, "~> 0.1.0"}]
-end
+iex> Metex.temperatures_of(["Miami", "Orlando"])
+:ok
+Miami: 26.3°C, Orlando: 28.9°C
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/metex](https://hexdocs.pm/metex).
 
