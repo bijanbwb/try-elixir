@@ -2,6 +2,12 @@
 
 Example from The Little Elixir and OTP Guidebook.
 
+## Open Weather Map
+
+You can get an API key by creating an account on
+openweathermap.org. Then fill it in at the bottom
+of the `lib/worker.ex` file.
+
 ## Usage
 
 ```bash
