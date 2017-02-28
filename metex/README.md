@@ -2,6 +2,13 @@
 
 Example from The Little Elixir and OTP Guidebook.
 
+## Usage
+
+```elixir
+iex> Metex.Worker.temperature_of("Orlando, FL")
+"Orlando, FL: 29.0°C"
+```
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
