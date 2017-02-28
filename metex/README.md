@@ -1,6 +1,6 @@
 # Metex
 
-**TODO: Add description**
+Example from The Little Elixir and OTP Guidebook.
 
 ## Installation
 
