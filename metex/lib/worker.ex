@@ -21,7 +21,7 @@ defmodule Metex.Worker do
     case temperature_of(location) do
       {:ok, temp} ->
         new_stats = update_stats(stats, location)
-        {:reply, "#{temp}°C", new_stats)
+        {:reply, "#{temp}°C", new_stats}
 
       _ ->
         {:reply, :error, stats}
@@ -38,7 +38,7 @@ defmodule Metex.Worker do
   end
 
   defp url_for(location) do
-    "http://api.openweathermbap.org/data/2.5/weather?q=#{location}&APPID=#{apikey}"
+    "http://api.openweathermbap.org/data/2.5/weather?q=#{location}&APPID=#{apikey()}"
   end
 
   defp parse_response({:ok, %HTTPoison.Response{body: body, status_code: 200}}) do
