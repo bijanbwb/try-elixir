@@ -38,7 +38,7 @@ defmodule Metex.Worker do
   end
 
   defp url_for(location) do
-    "http://api.openweathermbap.org/data/2.5/weather?q=#{location}&APPID=#{apikey()}"
+    "http://api.openweathermap.org/data/2.5/weather?q=#{location}&APPID=#{apikey()}"
   end
 
   defp parse_response({:ok, %HTTPoison.Response{body: body, status_code: 200}}) do
